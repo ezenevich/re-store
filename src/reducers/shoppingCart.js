@@ -39,10 +39,12 @@ const updateOrder = (state, bookId, quantity) => {
   const itemIndex = cartItems.findIndex(({ id }) => id === bookId);
   const item = cartItems[itemIndex];
   const newItem = updateCartItem(book, item, quantity);
+  const newCartItems = updateCartItems(cartItems, newItem, itemIndex);
+  const total = newCartItems.reduce((totalSum, item) => totalSum + item.total, 0)
 
   return {
-    orderTotal: 0,
-    cartItems: updateCartItems(cartItems, newItem, itemIndex)
+    orderTotal: total,
+    cartItems: newCartItems
   }
 }
 

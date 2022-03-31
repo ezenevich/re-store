@@ -40,6 +40,18 @@ const allBooksRemovedFromCart = (bookId) => {
   }
 }
 
+const userLogIn = () => {
+  return {
+    type: 'LOG_IN'
+  }
+}
+
+const userLogOut = () => {
+  return {
+    type: 'LOG_OUT'
+  }
+}
+
 
 const fetchBooksOld = (bookStoreService, dispatch) => () => {
   dispatch(booksRequested())
@@ -65,5 +77,7 @@ export {
   fetchBooks,
   bookAddedToCart,
   bookRemovedFromCart,
-  allBooksRemovedFromCart
+  allBooksRemovedFromCart,
+  userLogIn,
+  userLogOut
 }

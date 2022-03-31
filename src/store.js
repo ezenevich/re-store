@@ -21,8 +21,9 @@ const stringMiddleware = () => (next) => (action) => {
 
 const store = createStore(reducer, applyMiddleware(
   ThunkMiddleware,
-  stringMiddleware,
-  logMiddleware
+  stringMiddleware
+  // ,
+  // logMiddleware
 ));
 
 

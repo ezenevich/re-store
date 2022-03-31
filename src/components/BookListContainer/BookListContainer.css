@@ -1,3 +1,28 @@
 .book-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  height: 50vh;
+  overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(172, 172, 172);
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(119, 119, 119);
 }

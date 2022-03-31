@@ -3,7 +3,7 @@ import './ErrorIndicator.css';
 
 const ErrorIndicator = () => {
   return (
-    <div>
+    <div className='error-container alert alert-danger'>
       Error!
     </div>
   );

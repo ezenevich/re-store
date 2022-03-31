@@ -3,8 +3,17 @@ import './Loader.css';
 
 const Loader = () => {
   return (
-    <div>
-      loading...
+    <div className="loader-container">
+      <div className="lds-ellipsis">
+        <div className='bg-secondary'>
+        </div>
+        <div className='bg-secondary'>
+        </div>
+        <div className='bg-secondary' >
+        </div>
+        <div className='bg-secondary'>
+        </div>
+      </div>
     </div>
   );
 };

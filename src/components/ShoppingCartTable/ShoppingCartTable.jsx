@@ -9,11 +9,11 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
     const { id, title, count, total } = item;
     return (
       <tr key={id}>
-        <td>{idx + 1}</td>
-        <td>{title}</td>
-        <td>{count}</td>
-        <td>{total}</td>
-        <td>
+        <td className='col-1'>{idx + 1}</td>
+        <td className='col-3'>{title}</td>
+        <td className='col-1'>{count}</td>
+        <td className='col-2'>{total}</td>
+        <td className='col-1'>
           <button
             className="btn btn-outline-danger btn-sm float-right"
             onClick={() => onDelete(id)}>
@@ -38,14 +38,14 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
   return (
     <div className="shopping-cart-table">
       <h2>Your Order</h2>
-      <table className="table">
+      <table className="table mb-3">
         <thead>
           <tr>
             <th>#</th>
-            <th>Item</th>
+            <th>Book</th>
             <th>Count</th>
-            <th>Total</th>
-            <th>Action</th>
+            <th>Total Price</th>
+            <th className='text-right'>More Action</th>
           </tr>
         </thead>
 
@@ -56,7 +56,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
         </tbody>
       </table>
 
-      <div className="total">
+      <div className="total mt-3">
         Total: ${total}
       </div>
     </div>

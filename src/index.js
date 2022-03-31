@@ -23,7 +23,6 @@ ReactDOM.render(
         </BookStoreServiceProvider>
       </ErrorBoundry>
     </Provider>
-
   </React.StrictMode>,
   document.getElementById('root')
 );
